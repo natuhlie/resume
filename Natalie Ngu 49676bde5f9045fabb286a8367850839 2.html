@@ -1,0 +1,652 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Natalie Ngu</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="49676bde-5f90-45fa-bb28-6a8367850839" class="page sans"><header><h1 class="page-title">Natalie Ngu</h1></header><div class="page-body"><div id="db4c70ae-8fb1-4f53-9682-74ca77583354" class="column-list"><div id="f8d878d2-5f57-4bf1-aa8a-fc8c28c8ccc8" style="width:62.5%" class="column"><h2 id="eeae29f8-c203-49cd-9f65-26e067b6fbe6" class="">Business Development Associate</h2><p id="f9fdae86-1610-4938-8f87-5bbdababafd4" class="block-color-gray">🌉 Based in San Francisco </p><p id="e2782f1d-e3f2-40dd-80f1-4c8c5167b1c2" class="">✉️: <a href="mailto:natalieengu@gmail.com">natalieengu@gmail.com</a></p></div><div id="cf60f42c-f76a-45e8-be85-367d1b9ebb32" style="width:37.49999999999999%" class="column"><p id="ce5b3bbd-ba50-47bc-96f4-4403710e78d7" class="block-color-gray">updated: <time>@Jul 31, 2020</time></p><p id="5cde8281-3a66-421f-979d-dba7e3adc4a2" class="">
+</p></div></div><p id="bc4391e1-4cdf-45bc-8d02-c12aa1777921" class=""><strong>Key Expertise</strong></p><ul id="d7c3a14b-12ab-4a1e-9784-98b88104140c" class="bulleted-list"><li>Leadership of diverse teams (6-120 people)</li></ul><ul id="43ed7486-9852-4426-966b-850c588ad481" class="bulleted-list"><li>User Research &amp; Testing</li></ul><ul id="3c29c8ca-d090-4d91-958c-924fb4890251" class="bulleted-list"><li>Database Management</li></ul><h3 id="3816383b-b658-400c-a11f-85beba9744ce" class=""><strong>Tools</strong></h3><p id="c88e3496-6146-463f-8010-a3103a27f6eb" class="">Figma, Procreate, Asana, Notion, Trello, Salesforce, Webflow, Solver</p><h1 id="9c471eb4-66c5-465d-b18f-1a840388eefb" class="">Summary</h1><p id="b160db91-7380-4334-86d0-275ced1659b2" class="">I thrive at the intersection of business, creativity and social impact. I like <strong>building effective teams</strong> and processes, to create <strong>meaningful user experiences</strong>. I&#x27;m an avid learner with a <strong>no task too small</strong> mentality. I&#x27;ve had the chance to work with a variety of companies, from 5-person<strong> startups</strong> to large <strong>multinational businesses</strong>. I&#x27;ve been drawing ideas since I was 3, making websites since middle school, and am currently learning to code them from scratch.</p><div id="8abb1943-4af4-4539-bb09-f74f2493816e" class="column-list"><div id="654f0818-4aa4-4598-bc62-1a330957d0ad" style="width:50%" class="column"><p id="8680b047-946f-4953-9c86-729817fb8187" class=""><strong>Languages
+</strong>Mandarin, Malay, HTML, CSS, Javascript</p></div><div id="8bacd12b-801e-4144-bdd4-dbb9eb02c34a" style="width:50%" class="column"><p id="0d55d222-ed1a-47df-ba71-75b3422fcb97" class=""><strong>User Experience (UX) Design
+</strong>User Research, User Interviews, Usability Testing, Wireframing, Prototyping, Documentation</p></div></div><div id="04c32dac-68a7-448d-b56e-bd6a712cf6f0" class="column-list"><div id="8a19cb0e-d50b-493c-8bec-5201c99b29b0" style="width:50%" class="column"><p id="7582c6d1-2569-4bdc-ba59-4911c5661cd2" class=""><strong>Data Management
+</strong>Salesforce<strong>, </strong>SQL, Excel Interactive Dashboards, Linear Programming, Forecasting </p></div><div id="524dafdc-7f66-41d4-ac94-abe4f71a3fe0" style="width:50.000000000000014%" class="column"><p id="feccc874-d298-4b7b-b392-f6467b62cc75" class=""><strong>Project Management
+</strong>Leadership<strong>, </strong>Hiring and Building Effective Teams, Kanban, Six Sigma 
+</p></div></div><h1 id="4fe4f3bd-d4a6-45f9-9ab8-a88373bc5218" class="">Work History</h1><div id="3fb805a7-3b97-426a-9fb6-9839b3951cda" class="column-list"><div id="6e788317-8205-48bc-a940-c47fe90f88af" style="width:12.5%" class="column"><p id="a74dc615-a513-46e5-b5d5-816557d28a79" class="">Apr 2020- Present</p><p id="5658d841-48dd-4ccc-9297-29c1c4471b49" class="">
+</p><p id="44b0243b-abdd-40d8-99b4-a25c949fe096" class="">
+</p></div><div id="56a43acc-4c0c-408c-a1f6-bdb9120302f7" style="width:87.5%" class="column"><p id="4d88b190-e55f-40d2-9430-95dc1669776e" class=""><strong>Business Development Associate</strong> @ Etherdyne Technologies | <em>Santa Clara, CA</em></p><p id="98079a61-0159-4e67-b439-610d9c40181e" class="">I pitched myself to the advisor of this startup, and now I&#x27;m a user advocate responsible for alpha testing and creating media assets to help us break into a $17m market. </p><ul id="0fa6f33b-6086-4203-9ecc-cd4083bba0f8" class="bulleted-list"><li>Developed UX Research process for hardware usability within target demographic (Americans aged 50-80).</li></ul><ul id="940720c3-8106-4fc5-806b-d0f1aecb75ea" class="bulleted-list"><li>Recruited 30+ alpha testers for focus group via clubs and social media. </li></ul><ul id="2f1fc17e-8ea5-415d-b096-9b27044f393d" class="bulleted-list"><li>Sourced videographer to produce video aimed at investors and customers.</li></ul><ul id="5f8cecea-fbad-45e3-b850-8bc166b0b691" class="bulleted-list"><li>Maintained documentation of user testimonies and feedback.</li></ul></div></div><div id="45ba5174-2728-42ba-bee8-dd0683e2eff6" class="column-list"><div id="21f08cdf-bb1e-4542-8410-b3215e43a9e8" style="width:12.5%" class="column"><p id="d0d4a9ce-c5c6-4293-af5e-5fdfd3d04004" class="">Mar 2020-Jun 2020</p><p id="6929687d-0b74-452f-9742-ebbbdb9a1ec8" class="">
+</p><p id="f82fc10e-19fd-4645-a2da-682059d17d32" class="">
+</p><p id="4f8096ff-6cd4-4e1c-89cd-e72f0e72d395" class="">
+</p><p id="590e9af0-c1f5-4f93-a2c2-fbe5b9692dca" class="">
+</p><p id="c59ad031-b9eb-43fe-a234-649d3a89a5c9" class="">Mar 2020 - Present</p><p id="92f10616-bda2-4e6c-8c22-0674e3159663" class="">
+</p><p id="fcfcb544-6dc4-445d-95c2-aaa873bed4e9" class="">
+</p><p id="baf5ecd7-662d-41ad-9cbd-40092ea71d91" class="">
+</p><p id="49aaf79c-deaa-4cb7-abb0-0c3dd32ab886" class="">
+</p><p id="23170c05-364f-4427-b055-99c04defa537" class="">
+</p><p id="90f937ef-c9b7-467d-bc0c-e802faa55333" class="">
+</p><p id="ba7347be-9c28-4ab9-9680-1b72f1fcf028" class="">2015 - 2019</p><p id="894a3a55-9c33-4108-a09a-6d7357b58acd" class="">
+</p></div><div id="9caf99df-3618-483e-ad71-6ac9d08a2731" style="width:87.5%" class="column"><p id="ad01278a-5f8a-4f1c-8b3a-b862d8112bee" class=""><strong>Data Intern</strong> @ Rippleworks Foundation | <em>Redwood City, CA</em></p><p id="fab7f67b-b8c5-4307-8364-7cb7a7939427" class="">Worked on weekly projects to restore data integrity to global accounts. </p><ul id="f7c6cecb-aa95-4dd2-88d3-559f9f25a5e6" class="bulleted-list"><li>Consolidated &amp; deduplicated data for projects, accounts and opportunities.</li></ul><ul id="8154c047-efe0-4769-948f-e82b084779af" class="bulleted-list"><li>Streamlined expert network search process.</li></ul><ul id="0164027a-55cd-4bb1-bc3e-505e768e2751" class="bulleted-list"><li>Data collection &amp; TAM analysis to understand project impact.</li></ul><p id="d62ae914-ee47-41e9-b781-788cae38afcf" class="">
+</p><p id="8b73684b-f6e3-4723-a84d-2c65bb01c861" class=""><strong>Contractor</strong> </p><p id="9b627a77-1755-43d1-ae68-9af888ea23e8" class=""><strong>Content Analyst </strong>@ Vaco </p><ul id="e19ec5f7-eed6-4bd3-a7db-2f57097351e1" class="bulleted-list"><li>Ad review and curation based on client&#x27;s policy guidelines.</li></ul><p id="08865cad-5e81-4931-bb85-1ab361b6e4c5" class=""><strong>Trust &amp; Safety Data Entry Specialist </strong>@ Instacart</p><ul id="62fcad7d-d7ef-4f25-8be3-1114e7cb317e" class="bulleted-list"><li>Review of user-submitted data for accuracy and compliance.</li></ul><ul id="dfc3e31d-0841-4491-b78b-a24765a84960" class="bulleted-list"><li>Wrote queries for personalized success tracking.</li></ul><p id="a5e762f2-6a78-486a-beb2-670074d0bf85" class="">
+</p><p id="f45016b3-4b12-4e09-96ac-70a8d90dca66" class=""><strong>Student Staff</strong></p><p id="99f3f656-81d7-4299-af55-9da0beedb2d6" class=""><strong>Assistant to Board of Directors </strong>@ Associated Students, Inc</p><ul id="3307a67f-6f98-4bc2-86af-05e343db89a6" class="bulleted-list"><li>Led a team of 6 Assistants to provide administrative support to student government.</li></ul><ul id="0619e281-e52d-4d7c-b368-39e51f213307" class="bulleted-list"><li>Meeting services, calendaring and database management for corporate governance.</li></ul><p id="0422234d-a70f-426f-8175-5fff26ea4274" class=""><strong>First Year Experience Director </strong>@ New Student Programs</p><ul id="96624358-a2a4-4477-8bba-cf9cbb2b0e81" class="bulleted-list"><li>Recruited and trained 23 orientation leaders for summer-long orientation program.</li></ul><ul id="4a13e9e4-579e-4ff5-9434-273d80ed5545" class="bulleted-list"><li>Facilitated 60+ summer orientation sessions with 1,000+ attendees per session.</li></ul><ul id="710e6dd1-b3a3-4d45-b38a-7b461b3a107a" class="bulleted-list"><li>Systems admin for <a href="https://apps.apple.com/us/app/sf-state-gator-guides/id1244203429">mobile app</a>, created virtual/self-guided campus tour.</li></ul><ul id="33a61403-dde5-4a80-8f32-b4944ec1f8f1" class="bulleted-list"><li>Wrote weekly newsletter, promoted on-campus events. </li></ul><p id="bd64b62b-bd7e-459e-8970-1a4b25466e44" class=""><strong>Student Ambassador </strong>@ Beijing Foreign Studies University</p><ul id="4f470996-afef-4bb3-a85d-1bfabfab1601" class="bulleted-list"><li>Market research for Southeast Asia + Central Asia student recruitment.</li></ul><ul id="092e484d-516c-4951-a522-6dd21d0253eb" class="bulleted-list"><li>Awarded &quot;Top Performing Student Ambassador&quot; for year 2016-2017</li></ul><p id="167a2c5f-c750-47cc-98aa-2db41fe99656" class=""><strong>Director of Public Relations @ </strong>International Business School Union</p><ul id="6c0d3210-2cc6-4dd2-859e-4976bcc01368" class="bulleted-list"><li>Community and events manager for 300+ international students.</li></ul></div></div><h1 id="e965ee7e-7869-4f8f-8dda-edea36a4ffcc" class="">Projects</h1><p id="043c8a28-dedf-4679-ac49-9f1fde5630ba" class="">🎁 <a href="http://natartica.redbubble.com"><strong>Merchandise design + sales</strong></a></p><ul id="6fb803be-3191-4fd2-b242-d7e5f8d382cc" class="bulleted-list"><li>Illustrated 60+ designs to be printed on stickers, t-shirts and other forms of merchandise.</li></ul><ul id="a9b2f124-0056-4093-95f4-12b7d54fd22e" class="bulleted-list"><li>278 items sold, 1,374 unique visitors to site (from Aug 2019 to Jul 2020).</li></ul><p id="e61bdfe8-89b5-4a09-b803-a37b2e216bb2" class="">☠️ <a href="https://gumroad.com/l/kigt"><strong>Piracy! card game</strong></a></p><ul id="977b1f8e-0eb0-49c3-9fd0-bbc823e97da0" class="bulleted-list"><li>Ideation and illustration for card game. Gameplay testing still underway.</li></ul><p id="2ec09c59-e6e0-4665-9377-a64bcac1d8cf" class="">🗓️ Perpetual quote calendar for <a href="https://www.corevaluetraining.com/">Core Value Training</a></p><ul id="8d99ae8d-30b6-4e95-8025-abccffc913a4" class="bulleted-list"><li>UI Design for Android/iOS app. </li></ul><ul id="3dc52be1-b065-4adf-8195-78ebdd90447d" class="bulleted-list"><li>Coordinated requirements with developer, content authors and translators.</li></ul><p id="e1881e45-2284-4dda-9efc-1b3feb91982a" class="">💌 <strong><a href="http://ratden.superhi.com/">USPS-themed sticker set sale page</a></strong></p><ul id="9b3ba17b-df7f-4f76-97d5-31dcc0589299" class="bulleted-list"><li>Worked with visual designer to create a sticker set in support of the US Postal Service.</li></ul><ul id="7be6fe9b-253a-4e22-a45e-4bbeca852a23" class="bulleted-list"><li>Implemented Stripe API for one-stop purchase page.</li></ul><p id="4dc9857d-65fd-4ef7-abe2-c763ec74502e" class="">📦 <strong><a href="https://tripetto.app/run/O3RU95138G">Item donation in SF</a></strong></p><ul id="ab5673b7-5e3e-4968-b60f-ef2861c92c25" class="bulleted-list"><li>Worked with PM mentor to brainstorm and prototype a tool to find donation options in SF.</li></ul><p id="fa39435b-f216-4c35-bd3d-2134c1e4c5b1" class="">🎵 <strong><a href="https://open.spotify.com/playlist/5mMUsADgVWQ3qaKZagjtoG?si=TkjjvY07Qy2C9gfI0W-_HQ">Music cover design</a></strong></p><ul id="f38b49d2-f483-48ab-99fe-6d99ad4e8b4d" class="bulleted-list"><li>Album artwork for 3 musicians with a total of 42,282 monthly listeners.</li></ul><p id="36c4645e-74fa-40c9-b1b5-1f53992f1e45" class="">🎒<a href="https://littleshepherdkch.wixsite.com/kuching"> </a><strong><a href="https://littleshepherdkch.wixsite.com/kuching">Little Shepherd Kindergarten website</a></strong></p><ul id="f5badeb6-c054-4f71-ab01-371d7e4ed6df" class="bulleted-list"><li>Built website on Wix.</li></ul><ul id="40e2e95e-079e-4632-8a7d-88860d5a7fa9" class="bulleted-list"><li>Provided illustration for logo, background and blog posts.</li></ul><h1 id="0a11342d-0c0c-47c4-9782-687e61075d25" class="">Education</h1><div id="c3b6ecfd-39ff-4168-b314-aa5bddb7bbbb" class="column-list"><div id="c5b1c87e-1632-4e32-bc5e-3276aa7e65f6" style="width:12.5%" class="column"><p id="24b771fa-54f3-48f9-849b-3546a7082729" class="">2015-2017</p><p id="81faf9be-3523-462b-b4ed-dc1f9623327e" class="">
+</p><p id="444147b4-0808-4c35-bf3c-6684786d3dc5" class="">2017-2019</p><p id="a649332d-a78d-4a08-a96d-62301e36c94b" class="">
+</p></div><div id="a9e05196-577d-43dd-97b2-e16dcd2b3ba0" style="width:87.5%" class="column"><p id="e826f5da-0bab-4d2c-98a3-6fc809af5f22" class=""><strong>Beijing Foreign Studies University</strong></p><p id="45f498e4-05c6-4154-b560-b5de327348ae" class="">International Business Studies</p><p id="eef0ecd3-3dfc-4370-ba09-92a5c8c2cb80" class=""><strong>San Francisco State University</strong></p><p id="4c3bafa2-1567-44d7-a4a0-8374cb189b91" class="">B.S. Business Administration</p><p id="1522cd89-9af1-4024-8cfa-ec29b95640bb" class="">Major Decision Sciences, Minor International Business</p></div></div><h1 id="ce738f62-e2f1-463a-a2e2-ccae9e60e4e9" class="">Recent Reads</h1><ul id="b84a15e0-4712-47b8-8ee1-91c9375a08c2" class="bulleted-list"><li>Range by David Epstein</li></ul><ul id="5b33f908-20be-4a52-aeaa-08331da0d941" class="bulleted-list"><li>Principles by Ray Dalio</li></ul><ul id="11cf0a79-8309-4794-9e46-ceef40978408" class="bulleted-list"><li>Flow by Mihaly Csikszentmihalyi</li></ul><ul id="3fc7ec21-5184-4ef1-9d94-a38e118610cc" class="bulleted-list"><li>The Infinite Game by Simon Sinek</li></ul><p id="e94b546d-d8b6-490b-b5e4-7043a1d1a35b" class="">
+</p><p id="18a6a1ad-9ed5-4193-9703-a659b4927307" class="">Thanks for reading! 👋</p><p id="f72a0ac8-31b8-4557-91a3-c034fb8c90ed" class="">
+</p></div></article></body></html>
